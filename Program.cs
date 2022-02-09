@@ -12,6 +12,10 @@ namespace EmployeeWage1
             {
                 Console.WriteLine("Employee is present");
             }
+            else if (empCheck == 1)
+            {
+                Console.WriteLine("Employee is partial present");
+            }
             else
             {
                 Console.WriteLine("Employee is absent");
@@ -20,3 +24,4 @@ namespace EmployeeWage1
         }
     }
 }
+            
