@@ -11,10 +11,14 @@ namespace EmployeeWage1
             const int WAGE_PER_HOUR = 20;
             const int FULL_TIME_WORKING_HOUR = 8;
             int PART_TIME_WORKING_HOUR = 4;
-            int NO_OF_WORKING_DAY_IN_MONTH = 20;
-            int day = 0;
 
-            while (day != 20)
+            int TOTAL_WORKING_HOURS_IN_MONTH = 100;
+            int NO_OF_WORKING_DAY_IN_MONTH = 20;
+
+            //initialize variable
+            int day = 0;
+            int totalWorkingHr = 0;
+            while (day != NO_OF_WORKING_DAY_IN_MONTH && totalWorkingHr != TOTAL_WORKING_HOURS_IN_MONTH)
             {
                 int wage = 0;
                 Random random = new Random();
@@ -58,7 +62,7 @@ namespace EmployeeWage1
                 day++;
 
             }
-
+            Console.WriteLine($"No of working day:{day} and Total working hr:{totalWorkingHr}");
         }
     }
 }
