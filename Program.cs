@@ -23,34 +23,20 @@ namespace EmployeeWage1
                 int wage = 0;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
-                if (empCheck == 0)
-                {
-                    Console.WriteLine("Employee is present");
-                    wage = FULL_TIME_WORKING_HOUR * WAGE_PER_HOUR;
-                    Console.WriteLine($"WAGE:{wage}");
-                }
-                else if (empCheck == PARTIAL_PRESENT)
-                {
-                    Console.WriteLine("Employee is present");
-                    wage = FULL_TIME_WORKING_HOUR * WAGE_PER_HOUR;
-                    Console.WriteLine($"WAGE:{wage}");
-                }
-                else
-                {
-                    Console.WriteLine("Employee is absent");
 
-                }
                 switch (empCheck)
                 {
                     case PRESENT:
                         Console.WriteLine("Employee is present");
                         wage = FULL_TIME_WORKING_HOUR * WAGE_PER_HOUR;
+                        totalWorkingHr = totalWorkingHr + FULL_TIME_WORKING_HOUR;
                         Console.WriteLine($"WAGE:{wage}");
                         break;
 
                     case PARTIAL_PRESENT:
-                        Console.WriteLine("Employee is present");
-                        wage = FULL_TIME_WORKING_HOUR * WAGE_PER_HOUR;
+                        Console.WriteLine("Employee is partial present");
+                        wage = PART_TIME_WORKING_HOUR * WAGE_PER_HOUR;
+                        totalWorkingHr = totalWorkingHr + PART_TIME_WORKING_HOUR;
                         Console.WriteLine($"WAGE:{wage}");
                         break;
 
@@ -58,6 +44,7 @@ namespace EmployeeWage1
                         Console.WriteLine("Employee is absent");
                         Console.WriteLine($"WAGE:{wage}");
                         break;
+
                 }
                 day++;
 
