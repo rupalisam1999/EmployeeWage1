@@ -41,7 +41,7 @@ namespace EmployeeWage1
 
                 case PARTIAL_PRESENT:
                     Console.WriteLine("Employee is present");
-                    wage = FULL_TIME_WORKING_HOUR * WAGE_PER_HOUR;
+                    wage = PARTIAL_TIME_WORKING_HOUR * WAGE_PER_HOUR;
                     Console.WriteLine($"WAGE:{wage}");
                     break;
             
