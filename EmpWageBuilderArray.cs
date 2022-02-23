@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace EmployeeWage1
 {
-    class EmpWageBuilderArray
+    class EmpWageBuilderArray: IComputeEmpWage
+    
     {
 
         public const int IS_PART_TIME = 1;
