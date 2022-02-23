@@ -13,17 +13,17 @@ namespace EmployeeWage1
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
         private int numOfCompany = 0;
-        ArrayList<CompanyEmpWage> companyEmpWageList;
+        List<CompanyEmpWage> companyEmpWageList;
 
         public EmpWageBuilderArray()
         {
-            this.companyEmpWageList = new ArrayList<CompanyEmpWage>();
+            this.companyEmpWageList = new List<CompanyEmpWage>();
         }
 
         public void addCompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHour, numOfWorkingDays, maxHoursPerMonth);
-            this.companyEmpWageList.AddLast(companyEmpWage);
+            this.companyEmpWageList.Add(companyEmpWage);
         }
 
         public void computeEmpWage()
