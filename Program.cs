@@ -10,10 +10,10 @@ namespace EmployeeWage1
 
         static void Main(string[] args)
         {
-            EmployeeWage employeeWage = new EmployeeWage("Dmart", 12, 6, 20, 90, 20);
-             employeeWage.ComputeEmpwage();
-            Console.WriteLine(employeeWage.ToString());
-           
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addCompanyEmpWage("Dmart", 20, 2, 10);
+            empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
+            empWageBuilder.computeEmpWage();
         }
     }
 }
